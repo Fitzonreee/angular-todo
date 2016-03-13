@@ -7,5 +7,29 @@
 
 
 /*************************
-
+    List
 *************************/
+.row-wrapper {
+  background-color: rgba(204, 204, 204, 0.35);
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+.list, .actions {
+  display: inline-block;
+}
+
+
+/*************************
+    Button Overrides - change hover states
+*************************/
+.btn-danger {
+  background-color: #DA4453;
+  border-color: #DA4453;
+}
+
+.btn-primary {
+  background-color: #48CFAD;
+  border-color: #48CFAD;
+}
