@@ -10,7 +10,25 @@
   <body ng-app="todoListApp">
 
     <div class="container">
+      <div class="row">
+        <h1 class="text-center">To Do List</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
 
+          <div class="list">
+            <input type="checkbox">
+            <label class="editing-label">A sample To Do!</label>
+            <input class="editing-label" type="text">
+          </div>
+          <div class="actions">
+            <a class="btn btn-sm btn-warning" href="">Edit</a>
+            <a class="btn btn-sm btn-primary" href="">Save</a>
+            <a class="btn btn-sm btn-danger" href="" class="delete">Delete</a>
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
