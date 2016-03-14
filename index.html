@@ -11,14 +11,15 @@
   </head>
   <body ng-app="todoListApp">
 
-    <div class="container">
+    <div ng-controller="mainCtrl" class="container">
+
       <div class="row">
         <h1 class="text-center">To Do List</h1>
       </div>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
-          <div class="row-wrapper">
+          <div ng-repeat="todo in todos" class="row-wrapper">
             <div class="list">
               <input ng-model="todo.completed" type="checkbox">
               <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
