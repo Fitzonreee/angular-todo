@@ -21,11 +21,11 @@
           <div class="row-wrapper">
             <div class="list">
               <input ng-model="todo.completed" type="checkbox">
-              <label class="editing-label">{{todo.name}}</label>
-              <input ng-model="todo.name" class="editing-label" type="text">
+              <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
+              <input ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
             </div>
             <div class="actions pull-right">
-              <a class="btn btn-xs btn-warning" href="">Edit</a>
+              <a class="btn btn-xs btn-warning" href="" ng-click="editing = !editing">Edit</a>
               <a class="btn btn-xs btn-primary" href="">Save</a>
               <a class="btn btn-xs btn-danger" href="" class="delete">Delete</a>
             </div>
