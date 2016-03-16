@@ -20,6 +20,10 @@
   display: inline-block;
 }
 
+.editing-item {
+  background-color: rgb(184, 131, 162);
+}
+
 
 
 /*************************
