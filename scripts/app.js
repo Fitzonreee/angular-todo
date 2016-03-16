@@ -1,5 +1,7 @@
 angular.module("todoListApp", [])
-  .controller('mainCtrl', function($scope){
+  .controller('mainCtrl', function($scope, dataService){
+
+    $scope.helloConsole = dataService.helloConsole;
 
     $scope.todos = [
       {"name": "finish this Angular app"},
@@ -9,4 +11,9 @@ angular.module("todoListApp", [])
       {"name": "Swim one day at CCC"}
     ]
 
+  })
+  .service('dataService', function() {
+    this.helloConsole = function() {
+      console.log("This is the hello console service!");
+    }
   });
