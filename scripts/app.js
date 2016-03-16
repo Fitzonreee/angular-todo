@@ -3,17 +3,19 @@ angular.module("todoListApp", [])
 
     $scope.helloConsole = dataService.helloConsole;
 
-    $scope.todos = [
-      {"name": "finish this Angular app"},
-      {"name": "Run 2 times a week"},
-      {"name": "Don't Drink except happy hour"},
-      {"name": "finish Full Mean course"},
-      {"name": "Swim one day at CCC"}
-    ]
+    dataService.getTodos(function(response) {
+      console.log(response.data);
+      $scope.todos = response.data;
+    });
 
   })
-  .service('dataService', function() {
+  .service('dataService', function($http) {
     this.helloConsole = function() {
       console.log("This is the hello console service!");
+    };
+
+    this.getTodos = function(callback) {
+      $http.get('mock/todos.json')
+        .then(callback)
     }
-  });
+});
