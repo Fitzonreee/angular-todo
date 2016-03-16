@@ -20,8 +20,20 @@
   display: inline-block;
 }
 
+/*************************
+  Items
+*************************/
+
+/* Class dynamically added on click */
 .editing-item {
   background-color: rgb(184, 131, 162);
+}
+
+.edited .list label::after {
+  content: " edited";
+  text-transform: uppercase;
+  padding-left: 5px;
+  color: rgb(107, 107, 107);
 }
 
 
