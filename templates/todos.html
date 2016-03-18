@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">To Do List</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="add">
+        <a href="" ng-click="addTodo();">+ Add a New Task</a>
+      </div>
+      <div ng-init="todo.completed = false" ng-repeat="todo in todos | orderBy: 'completed'" class="row-wrapper" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}">
+        <div class="list">
+          <input ng-model="todo.completed" type="checkbox">
+          <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
+          <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
+        </div>
+        <div class="actions pull-right">
+          <a class="btn btn-xs btn-warning" href="" ng-click="editing = !editing">Edit</a>
+          <a class="btn btn-xs btn-primary" href="" ng-click="saveTodo(todo);">Save</a>
+          <a class="btn btn-xs btn-danger" href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
