@@ -6,7 +6,7 @@ angular.module("todoListApp")
 
   $scope.addTodo = function() {
     var todo = {name: "This is a new Todo."};
-    $scope.todos.push(todo);
+    $scope.todos.unshift(todo);
   }
 
   $scope.helloConsole = dataService.helloConsole;

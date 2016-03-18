@@ -36,6 +36,12 @@
   color: rgb(107, 107, 107);
 }
 
+.completed {
+  text-decoration: line-through !important; /* not working */
+  color: rgb(210, 103, 103);
+}
+
+
 
 
 /*************************
