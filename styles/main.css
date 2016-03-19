@@ -3,7 +3,7 @@
 
     1. Add custom checkboxes
     2. Add new task functionality
-    
+
 *************************/
 
 
@@ -94,6 +94,10 @@ input[type="text"] {
 /*************************
     Button Overrides - change hover states
 *************************/
+.btn {
+  background-color: rgba(193, 190, 166, 1);
+}
+
 .btn span {
   padding: 4px 2px;
 }
