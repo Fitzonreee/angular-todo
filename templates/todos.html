@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <h1 class="text-center">To Do List</h1>
+    <!-- <h1 class="text-center">To Do List</h1> -->
   </div>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -14,9 +14,9 @@
           <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
         </div>
         <div class="actions pull-right">
-          <a class="btn btn-xs btn-warning" href="" ng-click="editing = !editing">Edit</a>
-          <a class="btn btn-xs btn-primary" href="" ng-click="saveTodo(todo);">Save</a>
-          <a class="btn btn-xs btn-danger" href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
+          <a class="btn btn-xs btn-default" href="" ng-click="editing = !editing">Edit</a>
+          <a class="btn btn-xs btn-default" href="" ng-click="saveTodo(todo);">Save</a>
+          <a class="btn btn-xs btn-default" href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
         </div>
       </div>
     </div>

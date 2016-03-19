@@ -3,6 +3,6 @@ angular.module('todoListApp')
     return {
       templateUrl: 'templates/todos.html',
       controller: 'mainCtrl',
-      replace: true;
+      replace: true
     }
   })
