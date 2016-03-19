@@ -10,13 +10,17 @@
       <div ng-init="todo.completed = false" ng-repeat="todo in todos | orderBy: 'completed'" class="row-wrapper" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}">
         <div class="list">
           <input ng-model="todo.completed" type="checkbox">
-          <label ng-hide="editing" class="editing-label">{{todo.name}}</label>
+
+          <!-- this is for custom checkboxes -->
+          <!-- <span ng-click="todo.completed = !todo.completed; todo.edited = true"></span> -->
+
+          <label ng-click="editing = true" ng-hide="editing" class="editing-label">{{todo.name}}</label>
           <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
         </div>
         <div class="actions pull-right">
-          <a class="btn btn-xs btn-default" href="" ng-click="editing = !editing">Edit</a>
-          <a class="btn btn-xs btn-default" href="" ng-click="saveTodo(todo);">Save</a>
-          <a class="btn btn-xs btn-default" href="" ng-click="deleteTodo(todo, $index)" class="delete">Delete</a>
+          <!-- <a class="btn btn-xs btn-default" href="" ng-click="editing = !editing">Edit</a> -->
+          <a class="btn btn-xs btn-default" href="" ng-click="saveTodos(todo);"><span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span></a>
+          <a class="btn btn-xs btn-default" href="" ng-click="deleteTodo(todo, $index)" class="delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
